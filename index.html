@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SCP: Doomsday</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	
+  </head>
+  <body>
+    <script src="script.js"></script>
+	<div id="items">
+	<button onclick="mode='1'">Edit</button>
+	<button onclick="mode='0'">Build</button>
+	<br/><br/>
+	
+		<button onclick="selectedItem = '1';isItem='0';" id="hw" class="heavy">Heavy Wall</button>
+		<button onclick="selectedItem = '0';isItem='0';" id="hf" class="heavy">Heavy Floor</button>
+		<button onclick="selectedItem='0';isItem='1';" id="ld" class="heavy">Heavy Door</button>
+		<button onclick="selectedItem = '3';isItem='0';" id="lw" class="light">Light Wall</button>
+		<button onclick="selectedItem = '2';isItem='0';" id="lf" class="light">Light Floor</button>
+		<button onclick="selectedItem='1';isItem='1';" id="ld" class="light">Light Door</button>
+	<br/><br/>
+	<button onclick="selectedTab = '0'">Heavy Containment</button>
+	<button onclick="selectedTab = '1'">Light Containment</button><br/><br/>
+	<button onclick="selectedItem = ' ';isItem='0';" id="ri">Remove Buildings</button>
+	<button onclick="selectedItem = ' ';isItem='1';" id="ri">Remove Items</button>
+	</div>
+	<br/><br/><button onclick="saveMap()">Save</button><br/><br/>
+	<p id="money">Money not availible</p>
+	<div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+	<script type="text/javascript" src="p5.play.js"></script>
+  </body>
+</html>
