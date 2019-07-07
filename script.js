@@ -12,6 +12,7 @@ var hour = 12;
 var selectedItem = " ";
 var isItem = "0";
 var selectedTab = 0;
+var ent;
 var buildMap = [
 	[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
 	[" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "],
@@ -113,11 +114,7 @@ var landMap = [
 	[" "," "," "," "," "," "," "," "," "," "," "," "],
 	[" "," "," "," "," "," "," "," "," "," "," "," "],
 	[" "," "," "," "," "," "," "," "," "," "," "," "]];
-var ent = {
-	temp : {
-		scientist : createSprite(12.5,12.5,25,25)
-	}
-}
+
 function preload() {
 	hdoor = loadImage("images/items/HDoor.png");
 }
@@ -125,6 +122,20 @@ function setup() {
 	var canvas = createCanvas(1000,1000);
 	canvas.parent('sketch-holder');
 	mode = "0";
+	ent = {
+		world: {}
+		template: {
+			scientist: {
+				entity: createSprite()
+				status: 1; //alive - 1, dead - 0
+				init: function() {
+					this.entity.width = 25;
+					this.entity.width = 25;
+				}
+			}
+		}
+	}
+};	
 }
 function hideClass(name) {
 	var divsToHide = document.getElementsByClassName(name); //divsToHide is an array
